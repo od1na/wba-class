@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { useState } from "react";
 
-function App() {
+function HookReact() {
+  const [count, setCount] = useState(0);
+  const [title, setTitle] = useState("");
+  const plus = () => {
+    setCount(count + 1);
+  };
+  const minus = () => {
+    setCount(count - 1)
+  };
+  const tittle = () => {
+    setTitle(title)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      
+      <input
+        onChange={({ target: { value } }) => setTitle(value)}
+        type="text"
+      />
+      <h1>{ title}</h1>
+      <h1>{count}</h1>
+      <button onClick={plus}>+</button>
+      <button onClick={minus}>-</button>
     </div>
   );
 }
 
-export default App;
+export default HookReact;
