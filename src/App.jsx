@@ -10,6 +10,20 @@ function Hooks() {
   // const minus = () => {
   //   setCount(count-1)
   // }
+  
+  // const plus = () => {
+  //   setCount(count+1)
+  // }
+  // const minus = () => {
+  //   setCount(count-1)
+  // }
+  
+  // const plus = () => {
+  //   setCount(count+1)
+  // }
+  // const minus = () => {
+  //   setCount(count-1)
+  // }
  
 
   const addcount = (event) => {
